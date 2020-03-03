@@ -1,15 +1,11 @@
-$("body").on("click", "#man", function (e) {
+$("body").on("click", ".my-button", function (e) {
 	e.preventDefault();
 
-	const url = $("#man").data("image");
+	const this_button = e.target;
 
-	$("img").attr("src", url);
-});
+	const url = $(this_button).data("image");
 
-$("body").on("click", "#baby", function (e) {
-	e.preventDefault();
-
-	const url = $("#baby").data("image");
+	console.log(url);
 
 	$("img").attr("src", url);
 });
